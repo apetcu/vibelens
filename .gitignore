@@ -4,5 +4,5 @@ dist/
 .vite/
 
 # Rust CLI build artifacts
-cli/target/
+target/
 
