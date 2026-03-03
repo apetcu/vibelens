@@ -62,20 +62,6 @@ cargo install --path .
 
 This installs the `ct` binary.
 
-### Creating a new release
-
-Releases are built automatically when you push a version tag. To cut a new release:
-
-1. Bump `version` in `Cargo.toml` if needed (e.g. `0.1.0`).
-2. Commit, push, then create and push a tag:
-
-   ```sh
-   git tag v0.1.0
-   git push origin v0.1.0
-   ```
-
-3. The [release workflow](.github/workflows/release.yml) builds for Linux, macOS, and Windows and publishes the release and assets on the [Releases](https://github.com/apetcu/vibelens/releases) page.
-
 ## Usage
 
 ```
