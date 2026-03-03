@@ -1,5 +1,7 @@
 # VibeTracker
 
+<img src="!/dashboard.png" width="100%">
+
 A fast, interactive terminal UI for analyzing your [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Cursor](https://cursor.com) usage across all your projects.
 
 `ct` scans your local session data, merges Claude and Cursor activity by project folder, and presents rich metrics in a navigable TUI — or outputs them as a table or JSON.
