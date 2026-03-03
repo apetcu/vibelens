@@ -1,4 +1,4 @@
-# VibeTracker
+# VibeLens
 
 <img src="!/dashboard.png" width="100%">
 
@@ -19,13 +19,62 @@ A fast, interactive terminal UI for analyzing your [Claude Code](https://docs.an
 
 ## Install
 
+### Option 1: One-line install (easiest)
+
+**Linux / macOS** — installs the latest release to `~/.local/bin` (creates it if needed):
+
+```sh
+curl -sSL https://raw.githubusercontent.com/apetcu/vibelens/main/install.sh | sh
+```
+
+Use a different directory (e.g. `/usr/local/bin`):
+
+```sh
+curl -sSL https://raw.githubusercontent.com/apetcu/vibelens/main/install.sh | sh -s -- -d /usr/local/bin
+```
+
+**Windows (PowerShell)** — installs to `%LOCALAPPDATA%\vibelens\bin` and adds it to your user PATH:
+
+```powershell
+irm https://raw.githubusercontent.com/apetcu/vibelens/main/install.ps1 | iex
+```
+
+### Option 2: Download a release
+
+Download the binary for your platform from the [Releases](https://github.com/apetcu/vibelens/releases) page, put it on your `PATH`, and optionally rename to `ct` (or `ct.exe` on Windows).
+
+| Platform        | Asset                |
+|----------------|----------------------|
+| Linux x86_64   | `ct-linux-x86_64`    |
+| macOS (Apple Silicon) | `ct-macos-aarch64` |
+| macOS (Intel)  | `ct-macos-x86_64`    |
+| Windows x86_64 | `ct-windows-x86_64.exe` |
+
+### Option 3: Build from source
+
 Requires Rust 1.70+.
 
 ```sh
+git clone https://github.com/apetcu/vibelens.git
+cd vibelens
 cargo install --path .
 ```
 
 This installs the `ct` binary.
+
+### Creating a new release
+
+Releases are built automatically when you push a version tag. To cut a new release:
+
+1. Bump `version` in `Cargo.toml` if needed (e.g. `0.1.0`).
+2. Commit, push, then create and push a tag:
+
+   ```sh
+   git tag v0.1.0
+   git push origin v0.1.0
+   ```
+
+3. The [release workflow](.github/workflows/release.yml) builds for Linux, macOS, and Windows and publishes the release and assets on the [Releases](https://github.com/apetcu/vibelens/releases) page.
 
 ## Usage
 
