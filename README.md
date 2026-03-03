@@ -35,6 +35,9 @@ ct --cli        # print a summary table to stdout
 ct --json       # output all metrics as JSON
 ```
 
+## Session Details
+<img src="!/session_details.png" width="100%">
+
 ## TUI Navigation
 
 | Key | Action |
