@@ -20,7 +20,6 @@ A fast, interactive terminal UI for analyzing your [Claude Code](https://docs.an
 Requires Rust 1.70+.
 
 ```sh
-cd cli
 cargo install --path .
 ```
 
